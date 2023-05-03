@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tutor Hiring Application</title>
+    <style>
+        /* Define some styles for your fonts and images */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('https://www.pixel4k.com/wp-content/uploads/2019/04/peaceful-blur-background-4k_1555207903.jpg');
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #f0f0f0;
+            margin-top: 50px;
+            animation: slide-in 1s ease-out;
+        }
+        nav {
+            text-align: center;
+            margin-top: 50px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px;
+            margin: 0 10px;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: #004466;
+            transform: scale(1.1);
+        }
+        @keyframes slide-in {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to e-Tutor Hiring Application</h1>
+    <nav>
+        <a href="{{ url_for('student_portal') }}">Student Portal</a>
+        <a href="{{ url_for('tutor_portal') }}">Tutor Portal</a>
+
+    </nav>
+</body>
+</html>

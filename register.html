@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+      /* CSS styles */
+      body {
+        background-image: url('https://www.pixel4k.com/wp-content/uploads/2019/04/peaceful-blur-background-4k_1555207903.jpg');
+        background-color: #1a1a1a;
+        color: #fff;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 16px;
+        
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #fff;
+      }
+      input[type="text"],
+      input[type="password"],
+      select {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+      
+      /* Images */
+      .logo {
+        width: 100px;
+        height: 100px;
+        background-image: url('path/to/your/image.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+      }
+      form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #080808;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+      /* Animation */
+      form {
+        opacity: 0;
+        animation-name: fade-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo"></div>
+    <h1>Register</h1>
+    <form method="POST" action="{{ url_for('register') }}">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <label for="role">Role:</label>
+      <select id="role" name="role">
+        <option value="student">Student</option>
+        <option value="tutor">Tutor</option>
+      </select>
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>

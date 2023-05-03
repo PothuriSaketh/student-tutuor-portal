@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        h1{
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+        }
+        body {
+            font-family: 'SuperFont', sans-serif;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* Animation */
+            transition: all 0.2s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+            /* Animation */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="">Select role</option>
+            <option value="student">Student</option>
+            <option value="tutor">Tutor</option>
+        </select><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
